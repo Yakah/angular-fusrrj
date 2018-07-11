@@ -9,6 +9,9 @@
   <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript">
+    if (global === undefined) {
+      var global = window;
+    }
     window.paceOptions = {
       document: true,
       eventLag: true,
