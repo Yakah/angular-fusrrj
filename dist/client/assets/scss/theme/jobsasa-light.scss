@@ -1,0 +1,8 @@
+$jsasa-default-light-primary: mat-palette($mat-deep-purple);
+$jsasa-default-light-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$jsasa-default-light-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$jsasa-default-light-theme: mat-light-theme($jsasa-default-light-primary, $jsasa-default-light-accent, $jsasa-default-light-warn);

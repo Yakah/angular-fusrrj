@@ -1,0 +1,89 @@
+<div class="login-wrapper ">
+  <!-- START Login Background Pic Wrapper-->
+  <div class="bg-pic">
+    <!-- START Background Pic-->
+    <img src="assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg"
+         pgRetina src1x="assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg"
+         src2x="assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" alt=""
+         class="lazy">
+    <!-- END Background Pic-->
+    <!-- START Background Caption-->
+    <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+      <h2 class="semi-bold text-white">
+        Jobsasa make it easy to enjoy what matters the most in the life</h2>
+      <p class="small">
+        images Displayed are solely for representation purposes only, All work copyright of respective
+        owner, otherwise © 2017-2018 Jobsasa.
+      </p>
+    </div>
+    <!-- END Background Caption-->
+  </div>
+  <!-- END Login Background Pic Wrapper-->
+  <!-- START Login Right Container-->
+  <div class="login-container bg-white">
+    <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+      <img src="assets/img/logo.png" alt="logo" pgRetina src1x="assets/img/logo.png" src2x="assets/img/logo_2x.png"
+           height="48">
+
+      <p class="p-t-35">Sign into your Jobsasa account</p>
+      <!-- START Login Form -->
+      <form class="p-t-15" role="form" #loginForm="ngForm" 
+      (ngSubmit)="loginForm.valid && onLoginSubmit()">
+        <!-- START Form Control-->
+        <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="username.invalid && (username.dirty || username.touched)">
+          <label>Username</label>
+          <input type="text" id="userName" name="username" [(ngModel)]="loginUser.username"  #username="ngModel"
+                 required minlength="3"
+                 placeholder="Enter your username" class="form-control">
+        </div>
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" >
+          <label  *ngIf="username.errors.required" class="error" >username cannot be empty.</label>
+          <label  *ngIf="username.errors.minlength" class="error" >The username is too short.</label>
+        </div>
+        <!-- END Form Control-->
+        <!-- START Form Control-->
+        <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="loginPassword.invalid && (loginPassword.dirty || loginPassword.touched)">
+          <label class="jsa-orange">Password</label>
+          <input type="password" class="form-control" placeholder="******" id="password" name="password" [(ngModel)]="loginUser.password"  #loginPassword="ngModel"
+                 required minlength="5">
+        </div>
+        <div *ngIf="loginPassword.invalid && (loginPassword.dirty || loginPassword.touched)" >
+          <label  *ngIf="loginPassword.errors.required" class="error" >password cannot be empty.</label>
+          <label  *ngIf="loginPassword.errors.minlength" class="error" >password is too short.</label>
+        </div>
+        <!-- START Form Control-->
+        <div class="row">
+          <div class="col-md-6 no-padding sm-p-l-10">
+            <mat-checkbox name="remember_me" [(ngModel)]="loginUser.remember_me">
+              Keep me signed in
+            </mat-checkbox>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-end">
+            <a routerLink="/auth/login" class="text-info small">Already have an account?</a>
+          </div>
+        </div>
+        <!-- END Form Control-->
+        <button mat-raised-button color="warn" type="submit" [disabled]="loginForm.invalid">Login</button>
+      </form>
+      <!--END Login Form-->
+      <div class="pull-bottom sm-pull-bottom">
+        <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
+          <div class="col-sm-3 col-md-2 no-padding">
+            <img alt="" class="m-t-5" pgRetina src1x="assets/img/demo/pages_icon.png"
+                 src2x="assets/img/demo/pages_icon_2x.png" height="60"
+                 src="assets/img/demo/pages_icon.png" width="60">
+          </div>
+          <div class="col-sm-9 no-padding m-t-10">
+            <p>
+              <small>
+                Create a pages account. If you have a facebook account, log into it for this
+                process. Sign in with <a href="javascript:void(0)" class="text-info">Facebook</a> or <a href="javascript:void(0)" class="text-info">Google</a>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Login Right Container-->
+</div>

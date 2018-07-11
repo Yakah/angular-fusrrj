@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* ******************************* Style Overrides **************/
+
+//Remove link and button underlines
+a, button {
+  text-decoration: none !important;
+}
+.form-group {
+  label.required {
+    &:after {
+      content: "*";
+      color: red;
+    }
+  }
+}

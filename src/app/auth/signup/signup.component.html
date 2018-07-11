@@ -1,0 +1,107 @@
+<div class="register-container full-height sm-p-t-30">
+  <div class="d-flex justify-content-center flex-column">
+    <img src="../assets/img/logo.png" alt="logo" pgRetina src1x="assets/img/logo.png" src2x="assets/img/logo_2x.png" width="150">
+    <h3>Jobsasa makes it easy to enjoy what matters the most in your life</h3>
+    <p>
+      Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a href="javascript:void(0)" class="text-info">Facebook</a> or <a href="javascript:void(0)" class="text-info">Google</a>
+    </p>
+    <form class="p-t-15" role="form" #signupForm="ngForm" (ngSubmit)="signupForm.valid && onSignupSubmit()">
+      <div class="row">
+        <div class="col-md-6">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="fName.invalid && (fName.dirty || fName.touched)">
+            <label class="required">First Name</label>
+            <input type="text" placeholder="eg. Sam" class="form-control" id="txtFirstName" name="first_name" [(ngModel)]="userData.first_name" #fName="ngModel" required >
+          </div>
+          <div *ngIf="fName.invalid && (fName.dirty || fName.touched)" >
+            <label  *ngIf="fName.hasError('required')" class="error" >First Name is required.</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="LName.invalid && (LName.dirty || LName.touched)">
+            <label class="required">Last Name</label>
+            <input type="text" placeholder="eg. Maosa" class="form-control" id="txtLastName" name="last_name" [(ngModel)]="userData.last_name"  #LName="ngModel" required>
+          </div>
+          <div *ngIf="LName.invalid && (LName.dirty || LName.touched)" >
+            <label  *ngIf="LName.errors.required" class="error" >This field is required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="email.invalid && (email.dirty || email.touched)">
+            <label class="required">Email</label>
+            <input type="email" autocomplete="off" placeholder="We will send loging details to you" class="form-control" id="txtemail" name="txtemail" [(ngModel)]="userData.email"  #email="ngModel" required email>
+          </div>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" >
+            <label  *ngIf="email.errors.required" class="error" >This field is required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="phone.invalid && (phone.dirty || phone.touched)">
+            <label class="required">Mobile Phone</label>
+            <input type="text" name="phone" autocomplete="off" placeholder="07xxxxxxxx or +2547xxxxxxxx" class="form-control" required
+                    [(ngModel)]="userData.phone" #phone="ngModel" pattern="((^\+?[1-9]{1}[0-9]{0,2})|0)[1-9]{1}[0-9]{8,10}"
+            >
+          </div>
+          <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" >
+            <label class="error" *ngIf="phone.hasError('required')" class="error" >The phone no. is required.</label>
+            <label class="error" *ngIf="phone.hasError('pattern')" class="error" >The phone no. is invalid.</label>
+            <label class="error" *ngIf="phone.hasError('minlenth')" class="error" >Invalid phone no. length.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="userName.invalid && (userName.dirty || userName.touched)">
+            <label class="required">username</label>
+            <input type="text" autocomplete="off" placeholder="eg. coolsam" class="form-control" id="txtUsername" name="username" [(ngModel)]="userData.username" #userName="ngModel" required>
+          </div>
+          <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" >
+            <label  *ngIf="userName.hasError('required')" class="error" >This field is required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="password.invalid && (password.dirty || password.touched)">
+            <label class="required">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="*****" required
+                   [(ngModel)]="userData.password" #password="ngModel"
+                   appValidateEqual="password_confirmation" reverse="true"
+                   minlength="6"
+            >
+          </div>
+          <div *ngIf="password.invalid && (password.dirty || password.touched)">
+            <label class="error" *ngIf="password.hasError('minlength')">Password must be at least 6 characters long</label>
+            <label class="error" *ngIf="password.hasError('required')">Password cannot be empty</label>
+            <label class="error" *ngIf="password.hasError('pattern')">Password must contain at least 1 letter, 1 digit and 1 special character</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="cpassword.invalid && (cpassword.dirty || cpassword.touched)">
+            <label class="required">Repeat Password</label>
+            <input type="password" class="form-control" name="password_confirmation" placeholder="******" required
+                   [(ngModel)]="userData.password_confirmation" #cpassword="ngModel"
+                   appValidateEqual="password"
+            >
+          </div>
+          <div *ngIf="cpassword.invalid && (cpassword.dirty|| cpassword.touched)">
+            <label class="error" *ngIf="cpassword.hasError('appValidateEqual')">Passwords do not match</label>
+          </div>
+        </div>
+      </div>
+      <div class="row m-t-10">
+        <div class="col-lg-6">
+          <p><small>I agree to the <a href="javascript:void(0)" class="text-info">Pages Terms</a> and <a href="javascript:void(0)" class="text-info">Privacy</a>.</small></p>
+        </div>
+        <div class="col-lg-6 text-right">
+          <a href="javascript:void(0)" class="text-info small">Help? Contact Support</a>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-cons m-t-10" type="submit" [class.disabled]="signupForm.invalid">Signup</button>
+    </form>
+
+  </div>
+</div>

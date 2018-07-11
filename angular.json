@@ -26,10 +26,32 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/@pages/styles",
+                "src/pages_ui/scss"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/plugins/bootstrap/css/bootstrap.min.css",
+              "src/assets/plugins/font-awesome/css/font-awesome.min.css",
+              "src/assets/plugins/codrops-stepsform/css/component.css",
+              "src/assets/scss/jobsasa-material.scss",
+              "src/assets/scss/_toastr.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/scrollreveal/dist/scrollreveal.js",
+              "node_modules/echarts/dist/echarts.min.js",
+              "src/app/@pages/assets/javascript/pages.js",
+              "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+              "node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+              "node_modules/imagesloaded/imagesloaded.pkgd.js",
+              "src/assets/plugins/modernizr.custom.js",
+              "src/assets/plugins/codrops-stepsform/js/classie.js",
+              "src/assets/plugins/codrops-stepsform/js/stepsForm.js",
+              "src/assets/plugins/skycons/skycons.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -76,7 +98,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/jobsasa-material.scss"
             ],
             "scripts": [],
             "assets": [
@@ -93,8 +116,23 @@
               "src/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "**/app/@pages/layouts/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/@pages/styles",
+                "src/pages_ui/scss"
+              ]
+            }
           }
         }
       }
@@ -122,5 +160,27 @@
       }
     }
   },
-  "defaultProject": "client"
+  "defaultProject": "client",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      },
+      "module": {
+        "spec": false
+      },
+      "directive": {
+        "spec": false
+      },
+      "service": {
+        "spec": false
+      },
+      "pipe": {
+        "spec": false
+      },
+      "class": {
+        "spec": false
+      }
+    }
+  }
 }
