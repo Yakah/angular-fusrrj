@@ -37,7 +37,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 'auto'
   };
-  
+
 @NgModule({
     imports: [
         CommonModule,

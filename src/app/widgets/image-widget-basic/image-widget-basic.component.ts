@@ -7,7 +7,8 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ImageWidgetBasicComponent implements OnInit {
-
+  flashheader = 'Whats Happening Now at a glance...';
+  flashcontent = 'Strathmore Business School Scurity Drill Panic';
   constructor() { }
 
   ngOnInit() {

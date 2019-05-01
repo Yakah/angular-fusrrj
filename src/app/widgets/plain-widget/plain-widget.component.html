@@ -1,8 +1,68 @@
 <pgcard TimeOut="3000" AdditionalClasses="card no-border bg-master widget widget-6 widget-loader-circle-lg no-margin full-height" MinimalHeader="true">
-    <div class="pull-bottom bottom-left bottom-right padding-25">
-		<h1 class="text-white semi-bold">30&#176;</h1>
-		<span class="label font-montserrat fs-11">TODAY</span>
-		<p class="text-white m-t-20">Feels like rainy</p>
-		<p class="text-white hint-text m-t-30">November 2014, 5 Thusday </p>
-	</div>
+  <swiper [config]="config" [(index)]="index">
+    <div class="slide-front tiles slide active">
+      <div class="padding-30">
+        <div class="pull-top">
+          <div class="pull-left visible-lg visible-xlg">
+            <i class="pg pg-map"></i>
+          </div>
+          <div class="pull-right">
+            <ul class="list-inline ">
+              <li>
+                <a href="javascript:void(1)" class="no-decoration text-white">
+                  <i class="pg pg-comment"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(1)" class="widget-6-fav no-decoration text-white">
+                  <i class="pg pg-like"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="pull-bottom pull-left p-b-5">
+          <!--<p class="p-t-10 fs-12 p-b-5 text-white no-margin">21 Jan</p>-->
+          <span class="label font-montserrat fs-11">{{prod1}}</span>
+          <h3 class="no-margin text-white p-b-10">{{desc1}}
+            <br>at
+            <span class="semi-bold">{{detail1}}</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="slide-back tiles">
+      <div class="padding-30">
+        <div class="pull-top">
+          <div class="pull-left visible-lg visible-xlg">
+            <i class="pg pg-map"></i>
+          </div>
+          <div class="pull-right">
+            <ul class="list-inline ">
+              <li>
+                <a href="javascript:void(1)" class="no-decoration text-white">
+                  <i class="pg pg-comment"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(1)" class="widget-6-fav no-decoration text-white">
+                  <i class="pg pg-like"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="pull-bottom p-b-30">
+          <span class="label font-montserrat fs-11">{{prod2}}</span>
+
+          <h3 class="no-margin text-white p-b-10">{{desc2}}
+            <br>at
+            <span class="semi-bold">{{detail2}}</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </swiper>
 </pgcard>

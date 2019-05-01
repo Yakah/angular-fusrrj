@@ -8,23 +8,53 @@ declare var pg: any;
   encapsulation:ViewEncapsulation.None
 })
 
-export class StackedBarWidgetComponent implements OnInit,OnDestroy {
+export class StackedBarWidgetComponent implements OnInit {
+//Tables datasources
+vacancies:{}[] = [
+{ title: 'Telecommunication Engineer', company: 'Safaricom', button: 'View' },
+{ title: 'Sales Executive', company: 'Safaricom', button: 'View' },
+{ title: 'Sound Technician', company: 'Safaricom', button: 'View' },
+{ title: 'Plumber', company: 'Safaricom', button: 'View' },
+{ title: 'Nurse', company: 'Safaricom', button: 'View' }
+];
 
+//Companies
+companies:{}[] = [
+{ field: 'Telecommunication', brand: 'Safaricom', location: 'Nairobi' },
+{ field: 'Telecommunication', brand: 'Airtel', location: 'Nairobi' },
+{ field: 'Telecommunication', brand: 'Telkom', location: 'Kisumu' },
+{ field: 'Construction', brand: 'Bamburi', location: 'Mombasa' },
+{ field: 'Energy', brand: 'Kengen', location: 'Nakuru' },
+];
+
+//PEOPLE
+people:{}[] = [
+{ image: 'src1', name: 'Jim Gordon', profession: 'Detective' },
+{ image: 'src2', name: 'Penguin Cobalpot', profession: 'Mafia' },
+{ image: 'src3', name: 'Alfred Penworth', profession: 'Buttler' },
+{ image: 'src4', name: 'Luke Skywaler', profession: 'Jedi' },
+{ image: 'src5', name: 'Sheev Palpatine', profession: 'Emperor' },
+];
+
+//connection index
+conindex = "+0.94";
+devops = "-0.63";
+//chart option
   chartOptions;
   timeout;
-  chartData = [{
+  /*chartData = [{
       "key": "New Users",
       "values": [],
       },
       {
         "key": "Returning Users",
         "values": [],
-    }]
+    }]*/
 
 
   ngOnInit() {
     //Generate Random Data
-    let data = [[],[]];
+    /*let data = [[],[]];
 
     var max = 90;
     var min = 80;
@@ -37,9 +67,9 @@ export class StackedBarWidgetComponent implements OnInit,OnDestroy {
 
     }
     this.chartData[0]["values"] = data[0]
-    this.chartData[1]["values"] = data[1]
+    this.chartData[1]["values"] = data[1]*/
   }
-
+/*
   ngAfterViewInit() {
     this.timeout = setTimeout(()=>{
       this.chartOptions = {
@@ -74,5 +104,5 @@ export class StackedBarWidgetComponent implements OnInit,OnDestroy {
   ngOnDestroy() {
     clearTimeout(this.timeout)
   }
-
+*/
 }

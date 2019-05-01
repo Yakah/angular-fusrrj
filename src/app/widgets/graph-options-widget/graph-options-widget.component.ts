@@ -23,6 +23,11 @@ export class GraphOptionsWidgetComponent implements OnInit, OnDestroy {
   }];
   nvd3LineOptions;
   timer;
+
+  views = "14,256";
+  today = "24";
+  week = "56";
+
   constructor() { }
 
   ngOnInit() {

@@ -13,6 +13,17 @@ export class WeatherWidgetComponent implements OnInit {
   set Type(value:string){
     this._type = value;
   }
+//extra data
+town="Nairobi";
+country = "Kenya";
+weathercon = "windy";
+wind:11;
+sunset:'21;05';
+sunrise:'05;20';
+visibility:21;
+humidity:20;
+precipitation:60;
+//end of data
 
   constructor() { }
 
@@ -38,7 +49,7 @@ export class WeatherWidgetComponent implements OnInit {
     icons.set("sleet3", Skycons.SLEET);
     icons.set("wind3", Skycons.SNOW);
 
-    // icons.play();
+    //icons.play();
   }
 
 }

@@ -1,31 +1,108 @@
-<pgcard TimeOut="3000" AdditionalClasses="widget-12-basic card no-border widget-loader-circle no-margin  col ar-1-1 sm-vh-75"
- Maximize="false" Toggle="false" Close="false" Controls="false" HeaderClass="hidden">
-  <div class="d-flex flex-column full-height full-width">
-      <div class="">
-        <div class="d-flex flex-row ">
-          <h2 class="m-t-5 m-b-5">Apple Inc.</h2>
+<pgcard TimeOut="3000" AdditionalClasses="widget-12-basic card card condenno-border widget-loader-circle no-margin  col ar-1-1 sm-vh-75"
+ Maximize="false" Toggle="false" Close="false" HeaderClass="top-right">
+ <h5 class="text-primary">What's Trending</h5>
+ <h3>See what's trending in jobsasa. click on the Item and read through!</h3>
+ <pg-tabset tabAnimation="slide-left" Type="simple" ShowPagination="true">
+   <pg-tab>
+     <ng-template #TabHeading>
+       JOBS
+     </ng-template>
+     <div class="row column-seperation">
+       <div class="full-width">
+         <div class="full-width" #chartContainer>
+           <div class="widget-12-chart">
+             <!--<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>-->
+             <!--Start of Jobs table-->
+             <div class="auto-overflow widget-11-2-table">
+               <table class="table table-condensed table-hover">
+                 <tbody>
+                   <tr *ngFor = "let vacancy of vacancies">
+                     <td class="font-montserrat all-caps fs-18 w-10">{{vacancy.title}}</td>
+                     <td class="text-right hidden-lg">
+                       <span class="hint-text small">{{vacancy.company}}</span>
+                     </td>
+                     <td class="w-25">
+                       <span class="font-montserrat fs-18">{{vacancy.button}}</span>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!--end of job-->
+           </div>
+         </div>
+       </div>
+     </div>
+   </pg-tab>
+   <pg-tab>
+     <ng-template #TabHeading>
+       COMPANIES
 
-          <h2 class="m-l-50 m-t-5 m-b-5 text-danger">
-            <span class="">448.97</span>
-            <span class="text-danger fs-12">-318.24</span>
-          </h2>
-        </div>
-        <div class="full-width">
-          <ul class="list-inline m-b-0">
-            <li><a href="#" class="font-montserrat text-master">1D</a>
-            </li>
-            <li class="active"><a href="#"
-                                  class="font-montserrat  bg-master-light text-master">5D</a>
-            </li>
-            <li><a href="#" class="font-montserrat text-master">1M</a>
-            </li>
-            <li><a href="#" class="font-montserrat text-master">1Y</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="nvd3-line line-chart text-center flex-1 relative" data-x-grid="false">
-        <nvd3 [options]="nvd3LineOptions" [data]="nvd3LineData"></nvd3>
-      </div>
-  </div>
+     </ng-template>
+     <div class="row column-seperation">
+       <div class="full-width">
+         <div class="full-width" #chartContainer>
+           <div class="widget-12-chart">
+
+             <div class="auto-overflow widget-11-2-table">
+               <table class="table table-condensed table-hover">
+                 <tbody>
+                   <tr *ngFor = "let company of companies">
+                     <td class="font-montserrat all-caps fs-18 w-20">{{company.field}}</td>
+                     <td class="text-right hidden-lg">
+                       <span class="hint-text small">{{company.brand}}</span>
+                     </td>
+                     <td class="w-25">
+                       <span class="font-montserrat fs-18">{{company.location}}</span>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!--end of the companies table-->
+           </div>
+         </div>
+       </div>
+     </div>
+   </pg-tab>
+   <pg-tab>
+     <ng-template #TabHeading>
+       PEOPLE
+
+     </ng-template>
+     <div class="row column-seperation">
+       <div class="full-width">
+         <div class="full-width" #chartContainer>
+           <div class="widget-12-chart">
+             <!--<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>-->
+             <!--Start of people table-->
+             <div class="auto-overflow widget-11-2-table">
+               <table class="table table-condensed table-hover">
+                 <tbody>
+                   <tr *ngFor = "let person of people">
+                     <td class="font-montserrat all-caps fs-4 w-5">{{person.image}}</td>
+                     <td class="text-right hidden-lg">
+                       <span class="hint-text small">{{person.name}}</span>
+                     </td>
+                     <td class="w-25">
+                       <span class="font-montserrat fs-20">{{person.profession}}</span>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!--End of table-->
+           </div>
+         </div>
+       </div>
+     </div>
+   </pg-tab>
+ </pg-tabset>
+ <div class="p-t-10 p-l-20 p-r-20 p-b-30">
+   <div class="row">
+     <div class="col-md-9">
+       <p>More</p>
+     </div>
+   </div>
+ </div>
 </pgcard>

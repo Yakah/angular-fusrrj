@@ -1,18 +1,34 @@
 <pgcard TimeOut="3000" AdditionalClasses="widget-15 card card-condensed  no-margin no-border widget-loader-circle" Maximize="false" Toggle="false"
  Close="false" BodyClass="no-padding" HeaderClass="top-right">
-	<pg-tabset tabAnimation="slide-left" Type="simple" ShowPagination="true">
+  <h5 class="text-primary">What's Trending</h5>
+  <h3>See what's trending in jobsasa. click on the Item and read through!</h3>
+  <pg-tabset tabAnimation="slide-left" Type="simple" ShowPagination="true">
 		<pg-tab>
 			<ng-template #TabHeading>
-				APPL
-				<br> 22.23
-				<br>
-				<span class="text-success">+60.223%</span>
+				JOBS
 			</ng-template>
 			<div class="row column-seperation">
 				<div class="full-width">
 					<div class="full-width" #chartContainer>
 						<div class="widget-15-chart">
-							<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>
+							<!--<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>-->
+              <!--Start of Jobs table-->
+              <div class="auto-overflow widget-11-2-table">
+            		<table class="table table-condensed table-hover">
+            			<tbody>
+            				<tr *ngFor = "let vacancy of vacancies">
+            					<td class="font-montserrat all-caps fs-18 w-10">{{vacancy.title}}</td>
+            					<td class="text-right hidden-lg">
+            						<span class="hint-text small">{{vacancy.company}}</span>
+            					</td>
+            					<td class="w-25">
+            						<span class="font-montserrat fs-18">{{vacancy.button}}</span>
+            					</td>
+            				</tr>
+            			</tbody>
+            		</table>
+            	</div>
+              <!--end of job-->
 						</div>
 					</div>
 				</div>
@@ -20,16 +36,31 @@
 		</pg-tab>
 		<pg-tab>
 			<ng-template #TabHeading>
-				FB
-				<br> 45.97
-				<br>
-				<span class="text-danger">-06.56%</span>
+				COMPANIES
+
 			</ng-template>
 			<div class="row column-seperation">
 				<div class="full-width">
 					<div class="full-width" #chartContainer>
 						<div class="widget-15-chart">
-							<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>
+							<!--<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>-->
+              <!--Start of companies table-->
+              <div class="auto-overflow widget-11-2-table">
+            		<table class="table table-condensed table-hover">
+            			<tbody>
+            				<tr *ngFor = "let company of companies">
+            					<td class="font-montserrat all-caps fs-18 w-20">{{company.field}}</td>
+            					<td class="text-right hidden-lg">
+            						<span class="hint-text small">{{company.brand}}</span>
+            					</td>
+            					<td class="w-25">
+            						<span class="font-montserrat fs-18">{{company.location}}</span>
+            					</td>
+            				</tr>
+            			</tbody>
+            		</table>
+            	</div>
+              <!--end of the companies table-->
 						</div>
 					</div>
 				</div>
@@ -37,16 +68,31 @@
 		</pg-tab>
 		<pg-tab>
 			<ng-template #TabHeading>
-				GOOG
-				<br> 22.23
-				<br>
-				<span class="text-success">+60.223%</span>
+				PEOPLE
+
 			</ng-template>
 			<div class="row column-seperation">
 				<div class="full-width">
 					<div class="full-width" #chartContainer>
 						<div class="widget-15-chart">
-							<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>
+							<!--<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>-->
+              <!--Start of people table-->
+              <div class="auto-overflow widget-11-2-table">
+            		<table class="table table-condensed table-hover">
+            			<tbody>
+            				<tr *ngFor = "let person of people">
+            					<td class="font-montserrat all-caps fs-4 w-5">{{person.image}}</td>
+            					<td class="text-right hidden-lg">
+            						<span class="hint-text small">{{person.name}}</span>
+            					</td>
+            					<td class="w-25">
+            						<span class="font-montserrat fs-20">{{person.profession}}</span>
+            					</td>
+            				</tr>
+            			</tbody>
+            		</table>
+            	</div>
+              <!--End of table-->
 						</div>
 					</div>
 				</div>
@@ -56,18 +102,18 @@
 	<div class="p-t-10 p-l-20 p-r-20 p-b-30">
 		<div class="row">
 			<div class="col-md-9">
-				<p class="fs-16 text-black">Apple’s Motivation - Innovation
-					<br>distinguishes between A leader and a follower.
+				<p class="fs-16 text-black">Jobsasa - job index
+					<br>connections rate.
 				</p>
 
-				<p class="small hint-text p-b-10">VIA Apple Store (Consumer and Education Individuals)
-					<br>(800) MY-APPLE (800-692-7753)
+				<p class="small hint-text p-b-10">Jobsasa DevOps
+					<br>(254) JS (0700-111-222)
 				</p>
 			</div>
 			<div class="col-md-3 text-right">
-				<p class="font-montserrat bold text-success fs-16">+0.94</p>
+				<p class="font-montserrat bold text-success fs-16">{{conindex}}</p>
 
-				<p class="font-montserrat bold text-danger fs-16">-0.63</p>
+				<p class="font-montserrat bold text-danger fs-16">{{devops}}</p>
 			</div>
 		</div>
 	</div>

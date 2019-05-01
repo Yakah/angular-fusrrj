@@ -1,8 +1,0 @@
-@import url(
-'https://fonts.googleapis.com/css?family=Abel|Dosis|Exo+2|Markazi+Text|Oxygen'
-);
-$custom-typography: mat-typography-config(
-  $font-family: '"Abel", san-serif',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 600)
-);

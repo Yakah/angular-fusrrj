@@ -9,13 +9,17 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class PlainLiveWidgetComponent implements OnInit {
   config;
   index = 0;
+  position1='Senior Chef';
+  position2 = 'Telecommunication Engineer';
+  firm1 = 'Sarova Stanley';
+  firm2 = 'Safaricom';
   constructor() { }
 
   ngOnInit() {
     this.config = {
       direction: 'vertical',
       autoplay: {
-        delay: 5000,
+        delay: 4500,
       }
     }
   }

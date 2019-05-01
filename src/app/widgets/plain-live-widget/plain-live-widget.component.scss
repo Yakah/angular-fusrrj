@@ -1,4 +1,4 @@
-
+$assets-url :"/assets";
 .widget-3{
     height: 100%;
     position: absolute;
@@ -22,6 +22,7 @@
         height: 100%;
         &:after{
             position: absolute;
+            //background-image: url("#{$assets-url}/img/dashboard/sarova1.jpg");
             background: transparent;
             content:"";
             left: 0;
