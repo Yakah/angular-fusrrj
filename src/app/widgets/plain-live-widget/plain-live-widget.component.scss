@@ -6,6 +6,28 @@ $assets-url :"/assets";
     right: 0;
     top: 0;
     bottom: 0;
+    .slide-back{
+      background-image: url("#{$assets-url}/img/dashboard/saf1.jpg");
+      overflow-y: hidden;
+      opacity: 0.7;
+      .row-sm-height:nth-child(1){
+        height: 50%;
+
+      }
+      .row-sm-height:nth-child(2){
+        height: 50%;
+
+      }
+    }
+    .slide-front > div {
+      display: flex;
+      flex-direction: column;
+      background-image: url("#{$assets-url}/img/dashboard/sarova1.jpg");
+      opacity: 0.7;
+      overflow-y:hidden;
+
+
+    }
     .widget-3-fav{
         background: rgba(0,0,0,.07);
         vertical-align: middle;

@@ -8,6 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 })
 export class ImageWidgetComponent implements OnInit {
+  sponsor = 'total';
   jobs = '2,222';
   people = '4,534';
   companies = '7,887';

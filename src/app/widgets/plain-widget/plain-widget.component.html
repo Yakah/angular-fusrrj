@@ -1,7 +1,7 @@
-<pgcard TimeOut="3000" AdditionalClasses="card no-border bg-master widget widget-6 widget-loader-circle-lg no-margin full-height" MinimalHeader="true">
+<pgcard TimeOut="3000" AdditionalClasses="card no-border bg-master widget widget-6 widget-loader-circle-lg no-margin full-height" BodyClass="no-padding" MinimalHeader="true" HeaderClass="hidden">
   <swiper [config]="config" [(index)]="index">
     <div class="slide-front tiles slide active">
-      <div class="padding-30">
+      <div class="padding-30 full-height full-width">
         <div class="pull-top">
           <div class="pull-left visible-lg visible-xlg">
             <i class="pg pg-map"></i>
@@ -9,12 +9,12 @@
           <div class="pull-right">
             <ul class="list-inline ">
               <li>
-                <a href="javascript:void(1)" class="no-decoration text-white">
+                <a href="javascript:void(0)" class="no-decoration text-white">
                   <i class="pg pg-comment"></i>
                 </a>
               </li>
               <li>
-                <a href="javascript:void(1)" class="widget-6-fav no-decoration text-white">
+                <a href="javascript:void(0)" class="widget-6-fav no-decoration text-white">
                   <i class="pg pg-like"></i>
                 </a>
               </li>
@@ -25,7 +25,7 @@
         <div class="pull-bottom pull-left p-b-5">
           <!--<p class="p-t-10 fs-12 p-b-5 text-white no-margin">21 Jan</p>-->
           <span class="label font-montserrat fs-11">{{prod1}}</span>
-          <h3 class="no-margin text-white p-b-10">{{desc1}}
+          <h3 class="no-margin text-primary p-b-10">{{desc1}}
             <br>at
             <span class="semi-bold">{{detail1}}</span>
           </h3>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="slide-back tiles">
-      <div class="padding-30">
+      <div class="padding-30 col-sm-height">
         <div class="pull-top">
           <div class="pull-left visible-lg visible-xlg">
             <i class="pg pg-map"></i>
@@ -41,12 +41,12 @@
           <div class="pull-right">
             <ul class="list-inline ">
               <li>
-                <a href="javascript:void(1)" class="no-decoration text-white">
+                <a href="javascript:void(0)" class="no-decoration text-white">
                   <i class="pg pg-comment"></i>
                 </a>
               </li>
               <li>
-                <a href="javascript:void(1)" class="widget-6-fav no-decoration text-white">
+                <a href="javascript:void(0)" class="widget-6-fav no-decoration text-white">
                   <i class="pg pg-like"></i>
                 </a>
               </li>

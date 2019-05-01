@@ -8,12 +8,36 @@ $assets-url :"/assets";
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url("#{$assets-url}/img/dashboard/sarova1.jpg");
+    background: rgba(0,0,0,.07);
+    .slide-back{
+      background-image: url("#{$assets-url}/img/dashboard/blueband.jpg");
+
+      .row-sm-height:nth-child(1){
+        height: 50%;
+
+      }
+      .row-sm-height:nth-child(2){
+        height: 50%;
+
+      }
+    }
+    //background-image: url("#{$assets-url}/img/dashboard/sarova1.jpg");
+
+    .slide-front > div {
+      display: flex;
+      flex-direction: column;
+      background: rgba(0,0,0,0.7);
+      background-image: url("#{$assets-url}/img/dashboard/sensodyne.jpg");
+      overflow-y: hidden;
+
+    }
+
     .widget-6-fav{
-        //background: rgba(0,0,0,.07);
+
         vertical-align: pull-left;
         padding: 6px 11px;
         display: block;
+
     }
     .pg-map {
         font-size: 30px;
@@ -21,7 +45,6 @@ $assets-url :"/assets";
     }
     .widget-6-inner{
         position: relative;
-
         width: 100%;
         height: 100%;
         &:after{

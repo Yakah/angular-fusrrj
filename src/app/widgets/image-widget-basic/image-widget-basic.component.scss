@@ -22,6 +22,7 @@ $assets-url :"/assets";
     position: absolute;
     z-index: 0;
     opacity: .69;
+    overflow-y: hidden;
   }
   & > div{
     position: relative;

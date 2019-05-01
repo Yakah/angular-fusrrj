@@ -12,7 +12,35 @@ declare let d3: any;
 })
 
 export class GraphWidgetComponent implements OnInit,OnDestroy {
-  nvd3LineData = [];
+
+  //Tables datasources
+  vacancies:{}[] = [
+  { title: 'Telecommunication Engineer', company: 'Safaricom', button: 'View' },
+  { title: 'Sales Executive', company: 'Safaricom', button: 'View' },
+  { title: 'Sound Technician', company: 'Safaricom', button: 'View' },
+  { title: 'Plumber', company: 'Safaricom', button: 'View' },
+  { title: 'Nurse', company: 'Safaricom', button: 'View' }
+  ];
+
+  //Companies
+  companies:{}[] = [
+  { field: 'Telecommunication', brand: 'Safaricom', location: 'Nairobi' },
+  { field: 'Telecommunication', brand: 'Airtel', location: 'Nairobi' },
+  { field: 'Telecommunication', brand: 'Telkom', location: 'Kisumu' },
+  { field: 'Construction', brand: 'Bamburi', location: 'Mombasa' },
+  { field: 'Energy', brand: 'Kengen', location: 'Nakuru' },
+  ];
+
+  //PEOPLE
+  people:{}[] = [
+  { image: 'src1', name: 'Jim Gordon', profession: 'Detective' },
+  { image: 'src2', name: 'Penguin Cobalpot', profession: 'Mafia' },
+  { image: 'src3', name: 'Alfred Penworth', profession: 'Buttler' },
+  { image: 'src4', name: 'Luke Skywaler', profession: 'Jedi' },
+  { image: 'src5', name: 'Sheev Palpatine', profession: 'Emperor' },
+  ];
+
+  /*nvd3LineData = [];
   nvd3LineOptions;
   _emphasize = false;
   _chartWrapperClass = "col-xlg-8 col-lg-12"
@@ -23,13 +51,13 @@ export class GraphWidgetComponent implements OnInit,OnDestroy {
   COLOR_PRIMARY = pg.getColor('primary')
   COLOR_COMPLETE = pg.getColor('complete')
   timeout;
-
+*/
   constructor(private _service: GraphWidgetService) {
 
   }
 
   ngOnInit() {
-    this.service = this._service.getChartSampleData().subscribe(d => {
+    /*this.service = this._service.getChartSampleData().subscribe(d => {
       this.timeout = setTimeout(() => {
       this.nvd3LineData = d['nvd3'].line;
         this.nvd3LineOptions = {
@@ -64,20 +92,20 @@ export class GraphWidgetComponent implements OnInit,OnDestroy {
           }
         }
       },1000)
-    })
+    })*/
   }
-
+/*
   ngAfterViewInit() {
     setTimeout(()=>{
       window.dispatchEvent(new Event('resize'));
     },3000)
   }
-
+*/
   ngOnDestroy() {
-    this.service.unsubscribe()
-    clearTimeout(this.timeout)
+/*    this.service.unsubscribe()
+    clearTimeout(this.timeout)*/
   }
-
+/*
   @Input()
   set Emphasize(value:boolean){
     this._emphasize = value;
@@ -92,6 +120,6 @@ export class GraphWidgetComponent implements OnInit,OnDestroy {
   set ChartHighlightsClass(value:string){
     this._chartHighlightsClass = value;
   }
-
+*/
 
 }

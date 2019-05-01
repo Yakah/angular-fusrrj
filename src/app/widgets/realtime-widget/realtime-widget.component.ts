@@ -11,7 +11,17 @@ declare let d3: any;
 })
 export class RealtimeWidgetComponent implements OnInit, OnDestroy{
 
-  chartOptions;
+  //Tables datasources
+  vacancies:{}[] = [
+  { title: 'Telecommunication Engineer', company: 'Safaricom', button: 'View' },
+  { title: 'Sales Executive', company: 'Safaricom', button: 'View' },
+  { title: 'Sound Technician', company: 'Safaricom', button: 'View' },
+  { title: 'Plumber', company: 'Safaricom', button: 'View' },
+  { title: 'Nurse', company: 'Safaricom', button: 'View' }
+  ];
+
+  //chart options
+  /*chartOptions;
   timeouts = [];
   chartData = [{
       "key": "Web Server",
@@ -20,14 +30,14 @@ export class RealtimeWidgetComponent implements OnInit, OnDestroy{
       {
         "key": "DB Server",
         "values": [],
-    }]
+    }]*/
 
   constructor() { }
 
   ngOnInit() {
-    
-  }
 
+  }
+/*
   updateChart(){
     this.timeouts.push(setTimeout(()=>{
       let data = [[],[]];
@@ -43,7 +53,7 @@ export class RealtimeWidgetComponent implements OnInit, OnDestroy{
       this.updateChart();
     },1000));
   }
- 
+
   ngAfterViewInit() {
 
     let data = [[],[]];
@@ -92,17 +102,17 @@ export class RealtimeWidgetComponent implements OnInit, OnDestroy{
       }
     },2000)
 
-    
+
     this.timeouts.push(setTimeout(()=>{
       window.dispatchEvent(new Event('resize'));
       // Enable to simulate real time chart
       //this.updateChart();
     },1000));
   }
-
+*/
   ngOnDestroy() {
-    for(const timeout of this.timeouts){
+    /*for(const timeout of this.timeouts){
       clearTimeout(timeout);
-    }
+    }*/
   }
 }
