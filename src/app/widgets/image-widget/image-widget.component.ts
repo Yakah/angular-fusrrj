@@ -13,9 +13,18 @@ export class ImageWidgetComponent implements OnInit {
   people = '4,534';
   companies = '7,887';
   tenders = '2,020';
+
+  config;
+  index = 1;
   constructor() { }
 
   ngOnInit() {
+    this.config = {
+      direction: 'horizontal',
+      autoplay: {
+        delay:6000,
+      }
+    }
   }
 
 

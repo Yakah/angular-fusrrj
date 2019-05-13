@@ -1,57 +1,117 @@
-
 <pgcard TimeOut="3000" RefreshColor="dark" AdditionalClasses="widget-1 card no-border bg-complete no-margin widget-loader-circle-lg full-height" MinimalHeader="true" >
-  <div class="pull-bottom bottom-left bottom-right ">
-    <span class="label font-montserrat fs-11">Total</span>
-    <br>
+  <swiper [config] = "config" [(index)]="index">
+    <div class="slide-front tiles active">
+      <div class="pull-bottom bottom-left bottom-right ">
+        <span class="label bg-danger font-montserrat fs-11">Total</span>
+        <br>
 
-    <h2 class="text-white">Search Jobs/People/Companies/Tenders</h2>
+        <h2 class="text-white">Search Jobs/People/Companies/Tenders</h2>
 
-    <p class="text-white hint-text">Jobsasa is brought to you today by <span class="label font-montserrat fs-11">{{sponsor}}</span></p>
+        <p class="text-white hint-text">Jobsasa is brought to you today by <span class="label font-montserrat fs-11">{{sponsor}}</span></p>
 
-    <div class="row stock-rates m-t-15">
-      <div class="company col-3">
-        <div>
-          <p class="font-montserrat text-success no-margin fs-16">
-            <i class="fa fa-caret-up"></i> <span>{{jobs}}</span>
-          </p>
+        <div class="row stock-rates m-t-15">
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-success no-margin fs-16">
+                <i class="fa fa-caret-up"></i> <span>{{jobs}}</span>
+              </p>
 
-          <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
-            JOBS
-          </p>
-        </div>
-      </div>
-      <div class="company col-3">
-        <div>
-          <p class="font-montserrat text-danger no-margin fs-16">
-            <i class="fa fa-caret-up"></i> <span>{{people}}</span>
-          </p>
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                JOBS
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-danger no-margin fs-16">
+                <i class="fa fa-caret-up"></i> <span>{{people}}</span>
+              </p>
 
-          <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
-            PEOPLE
-          </p>
-        </div>
-      </div>
-      <div class="company col-3">
-        <div>
-          <p class="font-montserrat text-success no-margin fs-16">
-            <i class="fa fa-caret-up"></i> {{companies}}
-          </p>
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                PEOPLE
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-success no-margin fs-16">
+                <i class="fa fa-caret-up"></i> {{companies}}
+              </p>
 
-          <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
-            COMPANIES
-          </p>
-        </div>
-      </div>
-      <div class="company col-3">
-        <div class="pull-right">
-          <p class="font-montserrat text-danger no-margin fs-16">
-            <i class="fa fa-caret-up"></i> {{tenders}}
-          </p>
-          <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
-            TENDERS
-          </p>
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                COMPANIES
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div class="pull-right">
+              <p class="font-montserrat text-danger no-margin fs-16">
+                <i class="fa fa-caret-up"></i> {{tenders}}
+              </p>
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                TENDERS
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="slide-back tiles">
+      <div class="pull-bottom bottom-left bottom-right ">
+        <span class="label bg-danger font-montserrat fs-11">Robotex</span>
+        <br>
+
+        <h2 class="text-white">Search Jobs/People/Companies/Tenders</h2>
+
+        <p class="text-white hint-text">Jobsasa is brought to you today by <span class="label font-montserrat fs-11">{{sponsor}}</span></p>
+
+        <div class="row stock-rates m-t-15">
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-success no-margin fs-16">
+                <i class="fa fa-caret-up"></i> <span>{{jobs}}</span>
+              </p>
+
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                JOBS
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-danger no-margin fs-16">
+                <i class="fa fa-caret-up"></i> <span>{{people}}</span>
+              </p>
+
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                PEOPLE
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div>
+              <p class="font-montserrat text-success no-margin fs-16">
+                <i class="fa fa-caret-up"></i> {{companies}}
+              </p>
+
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                COMPANIES
+              </p>
+            </div>
+          </div>
+          <div class="company col-3">
+            <div class="pull-right">
+              <p class="font-montserrat text-danger no-margin fs-16">
+                <i class="fa fa-caret-up"></i> {{tenders}}
+              </p>
+              <p class="bold text-white no-margin fs-11 font-montserrat lh-normal">
+                TENDERS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </swiper>
 </pgcard>

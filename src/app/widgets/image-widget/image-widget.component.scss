@@ -24,7 +24,10 @@ $assets-url :"/assets";
     }
     &:before {
       background-image: url('#{$assets-url}/img/dashboard/linear_gradient.png');
-      background-repeat: repeat-x;
+      display: flex;
+      flex-direction: row;
+      background-size: cover;
+      //background-repeat: repeat-x;
       content: " ";
       left: 0;
       right: 0;
@@ -79,3 +82,32 @@ $assets-url :"/assets";
         height: 340px;
     }
   }
+  :host /deep/ .widget-1 {
+      .slide-back{
+        background-image: url('#{$assets-url}/img/dashboard/toal.jpg');
+        opacity: 0.7;
+        .row-sm-height:nth-child(1){
+          height: 50%;
+
+        }
+        .row-sm-height:nth-child(2){
+          height: 50%;
+
+        }
+      }
+      .slide-front > div {
+        display:flex;
+        flex-direction:row;
+        flex-flow: row;
+        background-image: url("#{$assets-url}/img/dashboard/total.jpg");
+        opacity: 0.7;
+        overflow-y: hidden;
+      }
+      p,
+      .face{
+        display: block;
+        font-size: 1em;
+        line-height: 1.2em;
+        margin: 0;
+      }
+    }
