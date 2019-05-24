@@ -71,7 +71,7 @@ export class BarTileWidgetComponent implements OnInit, OnDestroy {
           groupSpacing: 0.7,
           yDomain: [0, 10],
           showLegend: false,
-          showXAxis: false,
+          showXAxis: true,
           showYAxis: false,
           interactive: false
         }

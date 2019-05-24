@@ -27,7 +27,7 @@
 
       <p class="p-t-35">Sign into your Jobsasa account</p>
       <!-- START Login Form -->
-      <form class="p-t-15" role="form" #loginForm="ngForm" 
+      <form class="p-t-15" role="form" #loginForm="ngForm"
       (ngSubmit)="loginForm.valid && onLoginSubmit()">
         <!-- START Form Control-->
         <div pgFormGroupDefault class="form-group form-group-default" [class.has-error]="username.invalid && (username.dirty || username.touched)">
@@ -53,16 +53,26 @@
         </div>
         <!-- START Form Control-->
         <div class="row">
-          <div class="col-md-6 no-padding sm-p-l-10">
+          <div class="col-md-4 no-padding sm-p-l-10">
+            <a routerLink="/auth/reset-password" class="text-warning small">I forgot my password</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-center justify-content-end">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 no-padding sm-p-l-10">
             <mat-checkbox name="remember_me" [(ngModel)]="loginUser.remember_me">
               Keep me signed in
             </mat-checkbox>
           </div>
-          <div class="col-md-6 d-flex align-items-center justify-content-end">
-            <a routerLink="/auth/login" class="text-info small">Already have an account?</a>
+          <div class="col-md-8 d-flex align-items-center justify-content-end">
+            <a routerLink="/auth/signup" class="text-info small">Don't have an account? Click here</a>
           </div>
         </div>
         <!-- END Form Control-->
+
+        <!--submit button control-->
         <button mat-raised-button color="warn" type="submit" [disabled]="loginForm.invalid">Login</button>
       </form>
       <!--END Login Form-->
