@@ -31,7 +31,7 @@ export class DefaultLayoutComponent extends RootLayout implements OnInit {
       thumbNailClass: 'bg-primary'
     },
     {
-      label: 'Messaging',
+      label: 'Messages/Emails',
       details: '234 New Emails',
       routerLink: 'messages/list',
       iconType: 'pg',
@@ -39,252 +39,209 @@ export class DefaultLayoutComponent extends RootLayout implements OnInit {
       thumbNailClass: 'bg-success'
     },
     {
+      label: 'Companies',
+      details: 'Partnering companies',
+      routerLink: '/companies',
+      iconType: 'pg',
+      iconName: 'messages',
+      thumbNailClass: 'jsa-green-bg'
+    },
+    {
       label: 'People',
       details: '100+ new people',
       routerLink: '/people',
       iconType: 'pg',
-      iconName: 'home',
+      iconName: 'users',
       thumbNailClass: 'jsa-orange-bg'
     },
     {
-      label: 'Auth',
-      iconType: 'fa',
-      iconName: 'users',
-      toggle: 'close',
-      thumbNailClass: 'jsa-light-green-bg',
-      submenu: [
-        {
-          label: 'Login',
-          routerLink: '/auth/login',
-          iconType: 'pg',
-          iconName: 'log-in',
-        },
-        {
-          label: 'Signup',
-          routerLink: '/auth/signup',
-          iconType: 'fa',
-          iconName: 'user-plus',
-        },
-        {
-          label: 'Reset Password',
-          routerLink: '/auth/reset-password',
-          iconType: 'fa',
-          iconName: 'user-shield',
-        }
-      ]
+      label: 'Jobs',
+      details: '100+ jobs',
+      routerLink: '/jobs',
+      iconType: 'pg',
+      iconName: 'messages',
+      thumbNailClass: 'jsa-light-green-bg'
     },
     {
-      label: 'UI Elements',
+      label: 'Social',
       iconType: 'letter',
       iconName: 'Ui',
       toggle: 'close',
       submenu: [
         {
-          label: 'Color',
+          label: 'Facebook',
           routerLink: 'ui/color',
           iconType: 'letter',
-          iconName: 'c',
+          iconName: 'F',
         },
         {
-          label: 'Typography',
+          label: 'Twitter',
           routerLink: 'ui/typography',
           iconType: 'letter',
           iconName: 't',
         },
         {
-          label: 'Icons',
+          label: 'Instagram',
           routerLink: 'ui/icons',
           iconType: 'letter',
           iconName: 'i',
         },
         {
-          label: 'Buttons',
+          label: 'Snapchat',
           routerLink: 'ui/buttons',
           iconType: 'letter',
-          iconName: 'b',
+          iconName: 'S',
         },
         {
-          label: 'Notifications',
+          label: 'My Space',
           routerLink: 'ui/notifications',
           iconType: 'letter',
-          iconName: 'n',
+          iconName: 'MS',
         },
         {
-          label: 'Modals',
+          label: 'M-changa',
           routerLink: 'ui/modal',
           iconType: 'letter',
-          iconName: 'm',
+          iconName: 'M-C',
         },
         {
-          label: 'Progress & Activity',
+          label: 'Tumblr',
           routerLink: 'ui/progress',
           iconType: 'letter',
-          iconName: 'pa',
+          iconName: 'T',
         },
         {
-          label: 'Tabs & Accordians',
+          label: 'Baidu',
           routerLink: 'ui/tabs',
           iconType: 'letter',
-          iconName: 'a',
-        },
-        {
-          label: 'Sliders',
-          routerLink: 'ui/sliders',
-          iconType: 'letter',
-          iconName: 's',
-        },
-        {
-          label: 'Treeview',
-          routerLink: 'ui/tree',
-          iconType: 'letter',
-          iconName: 'tv',
+          iconName: 'B',
         }
       ]
     },
     {
-      label: 'Forms',
-      iconType: 'pg',
-      iconName: 'form',
-      toggle: 'close',
-      submenu: [
-        {
-          label: 'Form Elements',
-          routerLink: 'forms/elements',
-          iconType: 'letter',
-          iconName: 'fe',
-        },
-        {
-          label: 'Form Layouts',
-          routerLink: 'forms/layouts',
-          iconType: 'letter',
-          iconName: 'fl',
-        },
-        {
-          label: 'Form Wizard',
-          routerLink: 'forms/wizard',
-          iconType: 'letter',
-          iconName: 'fq',
-        }
-      ]
-    },
-    {
-      label: 'Cards',
+      label: 'MARKET PLACE',
       routerLink: 'cards',
       iconType: 'pg',
       iconName: 'grid'
     },
     {
-      label: 'Views',
-      routerLink: 'views',
+      label: 'MY OFFICE',
+      routerLink: 'cards',
       iconType: 'pg',
-      iconName: 'ui'
+      iconName: 'grid'
     },
     {
-      label: 'Tables',
+      label: 'GROUPS/SACCOS',
+      iconType: 'pg',
+      iconName: 'form',
+      toggle: 'close',
+      submenu: [
+        {
+          label: 'Table Banking',
+          routerLink: 'forms/elements',
+          iconType: 'letter',
+          iconName: 'tb',
+        },
+        {
+          label: 'Sacco',
+          routerLink: 'forms/layouts',
+          iconType: 'letter',
+          iconName: 'C-S',
+        },
+        {
+          label: 'Business Directors',
+          routerLink: 'forms/wizard',
+          iconType: 'letter',
+          iconName: 'bd',
+        }
+      ]
+    },
+    {
+      label: 'TENDERS',
+      routerLink: 'cards',
+      iconType: 'pg',
+      iconName: 'grid'
+    },
+    {
+      label: ' IDEA CENTER',
+      routerLink: 'cards',
+      iconType: 'pg',
+      iconName: 'grid'
+    },
+    {
+      label: 'EVENTS',
       iconType: 'pg',
       iconName: 'tables',
       toggle: 'close',
       submenu: [
         {
-          label: 'Basic Tables',
+          label: 'Weddings',
           routerLink: 'tables/basic',
           iconType: 'letter',
-          iconName: 'bt',
+          iconName: 'w',
         },
         {
-          label: 'Advance Tables',
+          label: 'Birthdays',
           routerLink: 'tables/advance',
           iconType: 'letter',
-          iconName: 'dt',
+          iconName: 'bd',
+        },
+        {
+          label: 'Hikings',
+          routerLink: 'tables/advance',
+          iconType: 'letter',
+          iconName: 'H',
+        }
+        {
+          label: 'Keshas',
+          routerLink: 'tables/advance',
+          iconType: 'letter',
+          iconName: 'k',
         }
       ]
     },
     {
-      label: 'Maps',
+      label: 'Locations',
       iconType: 'pg',
       iconName: 'map',
       toggle: 'close',
       submenu: [
         {
-          label: 'Google Maps',
+          label: 'Malls',
           routerLink: 'maps/google',
           iconType: 'letter',
-          iconName: 'gm',
+          iconName: 'm',
+        },
+        {
+          label: 'Gas Stations',
+          routerLink: 'maps/google',
+          iconType: 'letter',
+          iconName: 'gs',
+        },
+        {
+          label: 'Eatouts',
+          routerLink: 'maps/google',
+          iconType: 'letter',
+          iconName: 'EO',
         }
       ]
     },
     {
-      label: 'Charts',
+      label: 'Forex',
       routerLink: 'charts',
       iconType: 'pg',
       iconName: 'charts'
     },
     {
-      label: 'Extra',
-      iconType: 'pg',
-      iconName: 'bag',
-      toggle: 'close',
-      submenu: [
-        {
-          label: 'Invoice',
-          routerLink: 'extra/invoice',
-          iconType: 'letter',
-          iconName: 'in',
-        },
-        {
-          label: '404 Page',
-          routerLink: 'session/error/404',
-          iconType: 'letter',
-          iconName: 'pg',
-        },
-        {
-          label: '500 Page',
-          routerLink: 'session/error/500',
-          iconType: 'letter',
-          iconName: 'pg',
-        },
-        {
-          label: 'Login',
-          routerLink: 'session/login',
-          iconType: 'letter',
-          iconName: 'l',
-        },
-        {
-          label: 'Register',
-          routerLink: 'session/register',
-          iconType: 'letter',
-          iconName: 're',
-        },
-        {
-          label: 'Lockscreen',
-          routerLink: 'session/lock',
-          iconType: 'letter',
-          iconName: 'ls',
-        },
-        {
-          label: 'Gallery',
-          routerLink: 'extra/gallery',
-          iconType: 'letter',
-          iconName: 'gl',
-        },
-        {
-          label: 'Timeline',
-          routerLink: 'extra/timeline',
-          iconType: 'letter',
-          iconName: 't',
-        }
-      ]
-    },
-    {
-      label: 'Docs',
-      externalLink: 'https://docs.pages.revox.io/v/angular/',
+      label: 'Sponsors',
+      externalLink: 'https://www.google.com/',
       target: '_blank',
       iconType: 'pg',
       iconName: 'note'
     },
     {
-      label: 'Changelog',
-      externalLink: 'http://changelog.pages.revox.io/',
+      label: 'Support',
+      externalLink: 'http://www.google.com/',
       target: '_blank',
       iconType: 'letter',
       iconName: 'Cl'
