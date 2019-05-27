@@ -191,7 +191,7 @@ export class DefaultLayoutComponent extends RootLayout implements OnInit {
           routerLink: 'tables/advance',
           iconType: 'letter',
           iconName: 'H',
-        }
+        },
         {
           label: 'Keshas',
           routerLink: 'tables/advance',
