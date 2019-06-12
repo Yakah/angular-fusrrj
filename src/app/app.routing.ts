@@ -30,5 +30,9 @@ export const AppRoutes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     loadChildren: './admin/admin.module#AdminModule',
+  },
+  {
+    path: 'jobs',
+    component: TableBasicWidgetComponent,
   }
 ];

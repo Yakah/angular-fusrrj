@@ -17,12 +17,12 @@
             		<table class="table table-condensed table-hover">
             			<tbody>
             				<tr *ngFor = "let vacancy of vacancies">
-            					<td class="font-montserrat all-caps fs-18 w-10">{{vacancy.title}}</td>
+            					<td class="font-montserrat all-caps small fs-12 w-15">{{vacancy.title}}</td>
             					<td class="text-right hidden-lg">
             						<span class="hint-text small">{{vacancy.company}}</span>
             					</td>
             					<td class="w-25">
-            						<span class="font-montserrat fs-18">{{vacancy.button}}</span>
+            						<span class="font-montserrat fs-18 btn btn-sm btn-info btn-rounded">{{vacancy.button}}</span>
             					</td>
             				</tr>
             			</tbody>
@@ -51,10 +51,10 @@
             				<tr *ngFor = "let company of companies">
             					<td class="font-montserrat all-caps fs-18 w-20">{{company.field}}</td>
             					<td class="text-right hidden-lg">
-            						<span class="hint-text small">{{company.brand}}</span>
+            						<span class="hint-text small w-15">{{company.brand}}</span>
             					</td>
             					<td class="w-25">
-            						<span class="font-montserrat fs-18">{{company.location}}</span>
+            						<span class="font-montserrat fs-18 w-15">{{company.location}}</span>
             					</td>
             				</tr>
             			</tbody>
@@ -81,9 +81,9 @@
             		<table class="table table-condensed table-hover">
             			<tbody>
             				<tr *ngFor = "let person of people">
-            					<td class="font-montserrat all-caps fs-4 w-5">{{person.image}}</td>
+            					<td class="font-montserrat all-caps fs-4 w-15">{{person.image}}</td>
             					<td class="text-right hidden-lg">
-            						<span class="hint-text small">{{person.name}}</span>
+            						<span class="hint-text small w-15">{{person.name}}</span>
             					</td>
             					<td class="w-25">
             						<span class="font-montserrat fs-20">{{person.profession}}</span>
@@ -102,18 +102,7 @@
 	<div class="p-t-10 p-l-20 p-r-20 p-b-30">
 		<div class="row">
 			<div class="col-md-9">
-				<p class="fs-16 text-black">Jobsasa - job index
-					<br>connections rate.
-				</p>
-
-				<p class="small hint-text p-b-10">Jobsasa DevOps
-					<br>(254) JS (0700-111-222)
-				</p>
-			</div>
-			<div class="col-md-3 text-right">
-				<p class="font-montserrat bold text-success fs-16">{{conindex}}</p>
-
-				<p class="font-montserrat bold text-danger fs-16">{{devops}}</p>
+				<p><a href="javascript:void(0)" class="pull-right"><i class="fa fa-arrow-circle-o-down text-success fs-16"></i></a>More</p>
 			</div>
 		</div>
 	</div>

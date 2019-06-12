@@ -16,27 +16,27 @@
 		<table class="table table-condensed table-hover">
 			<tbody>
 				<tr>
-					<td class="font-montserrat all-caps fs-12 w-50 text-danger">Title</td>
+					<td class="font-montserrat all-caps fs-12 w-30 text-danger">Title</td>
 					<td class="text-right hidden-lg">
 						<span class="hint-text small text-decoration">Company</span>
 					</td>
-					<td class="text-right b-r b-dashed b-grey w-25">
+					<td class="text-right b-r b-dashed b-grey w-15">
 						<span class="font-montserrat fs-18 text-danger">Location</span>
 					</td>
 					<td class="w-25">
-						<span class="font-montserrat fs-18 text-danger">Nature</span>
+						<span class="font-montserrat fs-8 w-15 text-danger">Nature</span>
 					</td>
 				</tr>
 				<tr *ngFor = "let job of jobs">
-					<td class="font-montserrat all-caps fs-12 w-50">{{job.jtitle}}</td>
+					<td class="font-montserrat all-caps fs-12 w-30">{{job.jtitle}}</td>
 					<td class="text-right hidden-lg">
 						<span class="hint-text small">{{job.jcompany}}</span>
 					</td>
-					<td class="text-right b-r b-dashed b-grey w-25">
+					<td class="text-right b-r b-dashed b-grey w-15">
 						<span class="hint-text small">{{job.jlocation}}</span>
 					</td>
 					<td class="w-25">
-						<span class="font-montserrat fs-18">{{job.jnature}}</span>
+						<span class="font-montserrat fs-8 w-15 label label-warning small hidden-xs">{{job.jnature}}</span>
 					</td>
 				</tr>
 			</tbody>

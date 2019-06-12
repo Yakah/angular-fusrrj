@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Job</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="jobtitle">Job Titile:</label>
+      <input formControlName="jobtitle" placeholder="Title" name="title" class="form-control" id="jobtitle">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Company:</label>
+      <input formControlName="company" placeholder="Company" name="company" class="form-control" id="jobcompany">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Location:</label>
+      <input formControlName="joblocation" placeholder="Location" name="location" class="form-control" id="joblocation">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Job Nature:</label>
+      <input formControlName="jobnature" placeholder="Nature" name="nature" class="form-control" id="jobnature">
+    </div>
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>

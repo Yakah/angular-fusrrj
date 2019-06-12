@@ -32,6 +32,7 @@ import { SwiperModule, SwiperConfigInterface, SWIPER_CONFIG } from 'ngx-swiper-w
 import { pgSwitchModule } from '../@pages/components/switch/switch.module';
 import { pgCardModule } from '../@pages/components/card/card.module';
 import { StatTileWidgetComponent } from './stat-tile-widget/stat-tile-widget.component';
+import { FormComponent } from './form/form.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -106,7 +107,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
         TableWidgetComponent,
         TodoListWidgetComponent,
         WeatherWidgetComponent,
-        WeeklySalesWidgetComponent
+        WeeklySalesWidgetComponent,
+        FormComponent
     ],
     providers: [
         {

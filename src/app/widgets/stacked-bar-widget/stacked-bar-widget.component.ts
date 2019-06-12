@@ -36,9 +36,6 @@ people:{}[] = [
 { image: 'src5', name: 'Sheev Palpatine', profession: 'Emperor' },
 ];
 
-//connection index
-conindex = "+0.94";
-devops = "-0.63";
 //chart option
   chartOptions;
   timeout;
